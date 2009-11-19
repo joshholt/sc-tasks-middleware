@@ -1,0 +1,31 @@
+// ..........................................................
+//  Tasks MiddleWare Server
+// ..........................................................
+
+/**
+  This is a middleware (more like middle man) server for
+  the SproutCore Agile Tasks Manager application.
+  
+  {{{
+      Prereq: 
+        Download NodeJS: (http://s3.amazonaws.com/four.livejournal/20091117/node-v0.1.18.tar.gz)
+              or
+        Clone NodeJS: (git clone git://github.com/ry/node.git)
+        
+        Compile and Install NodeJS (./configure && make && sudo make install)
+        
+      Running: 
+        After installing NodeJS you can run the server by issuing the following
+        command: 
+            
+            > nohup node server.js &
+            
+      Integration:
+        Point the Proxy in Tasks' Buildfile to localhost:8989 and your off and running.
+  }}}
+  
+  @author Joshua Holt
+  @version 0.1
+  @since 0.1
+  
+*/
