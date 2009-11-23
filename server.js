@@ -60,7 +60,7 @@ TasksNode = {
   /*
     Client Host (The host your web client needs to be connected to)
   */
-  CLIENT_HOST: null,
+  CLIENT_HOST: "10.136.210.67",
   
   /*
     Used to indetify this server
@@ -161,11 +161,11 @@ TasksNode.Handlers = {
 // ..........................................................
 //  ROUTES
 // ..........................................................
-TasksNode.CommonServer.get("/", TasksNode.Handlers.indexHandler);
-TasksNode.CommonServer.get("/tasks-server", TasksNode.Handlers.indexHandler);
-TasksNode.CommonServer.get("/tasks-server/user", TasksNode.Handlers.userHandler);
-TasksNode.CommonServer.get("/tasks-server/task", TasksNode.Handlers.taskHandler);
-TasksNode.CommonServer.get("/tasks-server/project", TasksNode.Handlers.projectHandler);
-TasksNode.CommonServer.post("/tasks-server/user", TasksNode.Handlers.userHandler);
-TasksNode.CommonServer.post("/tasks-server/task", TasksNode.Handlers.taskHandler);
-TasksNode.CommonServer.post("/tasks-server/project", TasksNode.Handlers.projectHandler);
+TasksNode.CommonServer.get("^/$", TasksNode.Handlers.indexHandler);
+TasksNode.CommonServer.get("^/tasks-server/?$", TasksNode.Handlers.indexHandler);
+TasksNode.CommonServer.get("^/tasks-server/user/?([0-9]+)?$", TasksNode.Handlers.userHandler);
+TasksNode.CommonServer.get("^/tasks-server/task/?([0-9]+)?$", TasksNode.Handlers.taskHandler);
+TasksNode.CommonServer.get("^/tasks-server/project/?([0-9]+)?$", TasksNode.Handlers.projectHandler);
+TasksNode.CommonServer.post("^/tasks-server/user/?([0-9]+)?$", TasksNode.Handlers.userHandler);
+TasksNode.CommonServer.post("^/tasks-server/task/?([0-9]+)?$", TasksNode.Handlers.taskHandler);
+TasksNode.CommonServer.post("^/tasks-server/project/?([0-9]+)?$", TasksNode.Handlers.projectHandler);
