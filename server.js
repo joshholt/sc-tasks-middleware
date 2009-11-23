@@ -60,7 +60,7 @@ TasksNode = {
   /*
     Client Host (The host your web client needs to be connected to)
   */
-  CLIENT_HOST: "10.136.210.67",
+  CLIENT_HOST: null,
   
   /*
     Used to indetify this server
